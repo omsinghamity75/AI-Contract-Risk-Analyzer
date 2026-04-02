@@ -1,0 +1,104 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "typography": {
+    "headings_font": "Chivo",
+    "body_font": "IBM Plex Sans",
+    "mono_font": "IBM Plex Mono",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl tracking-tight leading-none font-bold",
+      "h2": "text-2xl sm:text-3xl tracking-tight leading-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "h4": "text-lg font-bold uppercase tracking-wide",
+      "body": "text-base leading-relaxed text-slate-700",
+      "small": "text-sm text-slate-500",
+      "labels": "text-xs uppercase tracking-[0.2em] font-bold text-slate-500"
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "foreground": "#0F172A",
+    "surface": "#F8FAFC",
+    "surface_border": "#E2E8F0",
+    "primary": "#0F172A",
+    "primary_foreground": "#FFFFFF",
+    "status": {
+      "high_risk": {
+        "bg": "#FEF2F2",
+        "border": "#FECACA",
+        "text": "#DC2626"
+      },
+      "medium_risk": {
+        "bg": "#FFFBEB",
+        "border": "#FDE68A",
+        "text": "#D97706"
+      },
+      "safe": {
+        "bg": "#F0FDF4",
+        "border": "#BBF7D0",
+        "text": "#16A34A"
+      },
+      "entity": {
+        "bg": "#EFF6FF",
+        "border": "#BFDBFE",
+        "text": "#2563EB"
+      }
+    }
+  },
+  "layout_spacing": {
+    "philosophy": "Strict grid hierarchy, dense and compact. 'Control Room' grid.",
+    "border_radius": "rounded-none",
+    "container_padding": "p-6 sm:p-8",
+    "gap": "gap-4 sm:gap-6",
+    "sidebar_width": "w-80 lg:w-96",
+    "borders": "border border-slate-200"
+  },
+  "ui_components": {
+    "cards": "Flat background, 1px subtle border (border-slate-200), no shadow. On hover: slightly darken border, no vertical lift.",
+    "buttons": "Sharp corners (rounded-none). Primary: bg-slate-900 text-white hover:bg-slate-800 focus:ring-2 focus:ring-slate-900 focus:ring-offset-2. Secondary: bg-transparent border border-slate-300 hover:bg-slate-50.",
+    "inputs": "Flat, 1px border border-slate-300, rounded-none. focus:ring-1 focus:ring-slate-900 focus:border-slate-900",
+    "badges": "Square corners (rounded-none), text-xs uppercase tracking-wider, border-none.",
+    "progress_bar": "Flat rectangle (rounded-none). Color maps to overall risk.",
+    "document_viewer": "Split pane design. Left side holds the document with generous line height and max-w-prose for readability. Right side holds the interactive analysis and risk scoring."
+  },
+  "motion": {
+    "hover": "Instant color shift (transition-colors duration-150).",
+    "entrance": "Subtle fade-in for document parsing (opacity 0 to 1).",
+    "interactions": "Highlighting risky clauses on hover in the document viewer syncs with highlighting the corresponding sidebar card."
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "Regular weight, sharp geometric."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.pexels.com/photos/7821573/pexels-photo-7821573.jpeg",
+      "description": "Magnifying glass focusing on terms and conditions. Excellent for empty state or welcome screen.",
+      "category": "empty_state"
+    },
+    {
+      "url": "https://images.pexels.com/photos/20697911/pexels-photo-20697911.png",
+      "description": "Abstract architecture, good for an auth split screen or high-end dashboard accent.",
+      "category": "auth_background"
+    },
+    {
+      "url": "https://images.pexels.com/photos/12537427/pexels-photo-12537427.jpeg",
+      "description": "High-tech abstract pattern for AI parsing state or loading overlay.",
+      "category": "loading_state"
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure all text against colored risk backgrounds meets 4.5:1 minimum.",
+    "focus_states": "2px solid slate-900 outline offset by 2px on interactive elements.",
+    "test_attributes": "All interactive elements MUST use data-testid attributes (kebab-case, role-based)."
+  },
+  "instructions_to_main_agent": [
+    "Build a split-pane dashboard for the document analysis. Left pane: The raw document with highlighted clauses. Right pane: The Risk Score, Entity List, and Risk Cards.",
+    "Use Phosphor icons for a technical, precise feel (run `yarn add @phosphor-icons/react`).",
+    "Do not use rounded corners (use `rounded-none`). This is a serious legal app; it should feel like paper and precision instruments.",
+    "Risk score progress bar should be a segmented flat line or a sharp gauge, avoiding soft rounded progress tracks.",
+    "Use Shadcn UI components but override border radii to `rounded-none` and remove default shadows.",
+    "Ensure clause highlights in the document pane use the exact bg colors from `colors.status` to match the sidebar cards.",
+    "Highlight words or entities using `<mark>` tags or custom inline spans styled with `bg-blue-50 text-blue-700`."
+  ]
+}
