@@ -1,8 +1,4 @@
-Here’s a **complete professional README.md** tailored for your **AI Contract Risk Analyzer** project. You can copy-paste this directly into your GitHub repo.
-
----
-
-# 📄 AI Contract Risk Analyzer
+ 📄 AI Contract Risk Analyzer
 
 An intelligent AI-powered tool that analyzes legal contracts and identifies potential risks, clauses, and key entities. This project helps users quickly understand complex agreements using NLP and AI.
 
