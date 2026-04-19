@@ -23,33 +23,36 @@ st.markdown(
     """
     <style>
     :root {
-        --bg: #f4f7fb;
-        --surface: #ffffff;
-        --surface-2: #f8fbff;
-        --surface-3: #eef7f8;
-        --ink: #132238;
-        --muted: #53657a;
-        --line: #d8e1eb;
-        --brand: #135d66;
-        --brand-2: #0f3d56;
-        --brand-soft: #e7f6f7;
-        --accent: #b86a1f;
-        --accent-soft: #fff2e2;
+        --bg: #f8eefc;
+        --surface: rgba(255, 255, 255, 0.82);
+        --surface-2: rgba(255, 245, 252, 0.86);
+        --surface-3: rgba(236, 248, 255, 0.88);
+        --ink: #1d1634;
+        --muted: #5d547b;
+        --line: rgba(132, 95, 173, 0.18);
+        --brand: #ff6b6b;
+        --brand-2: #7b61ff;
+        --brand-3: #1fb6ff;
+        --brand-soft: rgba(255, 108, 108, 0.14);
+        --accent: #ff9f43;
+        --accent-soft: rgba(255, 159, 67, 0.16);
         --success: #116149;
         --success-soft: #e8f6ef;
         --warning: #8a5a00;
         --warning-soft: #fff4d9;
         --danger: #a12b2b;
         --danger-soft: #fdecec;
-        --shadow: 0 20px 50px rgba(17, 37, 62, 0.08);
-        --shadow-strong: 0 24px 60px rgba(12, 39, 60, 0.14);
+        --shadow: 0 22px 55px rgba(77, 35, 116, 0.14);
+        --shadow-strong: 0 28px 70px rgba(57, 28, 108, 0.2);
     }
 
     .stApp {
         background:
-            radial-gradient(circle at top left, rgba(19, 93, 102, 0.08), transparent 22%),
-            radial-gradient(circle at top right, rgba(184, 106, 31, 0.08), transparent 18%),
-            linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+            radial-gradient(circle at 8% 10%, rgba(255, 107, 107, 0.26), transparent 24%),
+            radial-gradient(circle at 92% 12%, rgba(123, 97, 255, 0.22), transparent 22%),
+            radial-gradient(circle at 80% 78%, rgba(31, 182, 255, 0.18), transparent 22%),
+            radial-gradient(circle at 16% 82%, rgba(255, 159, 67, 0.18), transparent 24%),
+            linear-gradient(145deg, #fff0f5 0%, #f6f1ff 45%, #eef8ff 100%);
     }
 
     html, body, [class*="css"] {
@@ -70,8 +73,9 @@ st.markdown(
     }
 
     [data-testid="stSidebar"] {
-        background: #fbfdff;
+        background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(246,240,255,0.92) 100%);
         border-right: 1px solid var(--line);
+        box-shadow: 12px 0 32px rgba(91, 67, 137, 0.08);
     }
 
     .landing-shell {
@@ -79,7 +83,7 @@ st.markdown(
     }
 
     .hero {
-        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 55%, var(--brand-3) 100%);
         border-radius: 30px;
         padding: 2.2rem;
         box-shadow: var(--shadow);
@@ -97,7 +101,7 @@ st.markdown(
         height: 320px;
         right: -70px;
         top: -90px;
-        background: radial-gradient(circle, rgba(255,255,255,0.17), transparent 65%);
+        background: radial-gradient(circle, rgba(255,255,255,0.22), transparent 65%);
     }
 
     .hero::before {
@@ -106,7 +110,7 @@ st.markdown(
         inset: auto 0 -45% auto;
         width: 360px;
         height: 360px;
-        background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 62%);
+        background: radial-gradient(circle, rgba(255, 206, 107, 0.25), transparent 62%);
         animation: pulseGlow 9s ease-in-out infinite;
     }
 
@@ -163,8 +167,9 @@ st.markdown(
         gap: 0.45rem;
         padding: 0.65rem 0.92rem;
         border-radius: 999px;
-        background: rgba(255,255,255,0.12);
-        border: 1px solid rgba(255,255,255,0.14);
+        background: rgba(255,255,255,0.16);
+        border: 1px solid rgba(255,255,255,0.22);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
         color: rgba(255,255,255,0.95);
         font-size: 0.92rem;
     }
@@ -263,7 +268,8 @@ st.markdown(
     }
 
     .surface-card {
-        background: var(--surface);
+        background: linear-gradient(160deg, rgba(255,255,255,0.88) 0%, rgba(255,242,249,0.74) 100%);
+        backdrop-filter: blur(14px);
         border: 1px solid var(--line);
         border-radius: 24px;
         padding: 1.25rem;
@@ -281,7 +287,7 @@ st.markdown(
     }
 
     .soft-card {
-        background: linear-gradient(180deg, #fcfdff 0%, var(--surface-2) 100%);
+        background: linear-gradient(145deg, rgba(255,255,255,0.78) 0%, rgba(239,229,255,0.76) 55%, rgba(234,247,255,0.82) 100%);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 1rem;
@@ -296,7 +302,7 @@ st.markdown(
         width: 180px;
         height: 180px;
         border-radius: 999px;
-        background: radial-gradient(circle, rgba(19, 93, 102, 0.08), transparent 62%);
+        background: radial-gradient(circle, rgba(255, 107, 107, 0.16), transparent 62%);
     }
 
     .feature-title {
@@ -312,7 +318,8 @@ st.markdown(
     }
 
     .stat-card {
-        background: var(--surface);
+        background: linear-gradient(155deg, rgba(255,255,255,0.88) 0%, rgba(240,245,255,0.8) 48%, rgba(255,239,246,0.82) 100%);
+        backdrop-filter: blur(12px);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 1rem;
@@ -349,9 +356,9 @@ st.markdown(
         margin: 0.22rem 0.35rem 0 0;
         padding: 0.42rem 0.72rem;
         border-radius: 999px;
-        border: 1px solid var(--line);
-        background: var(--surface-2);
-        color: #23445a;
+        border: 1px solid rgba(123, 97, 255, 0.2);
+        background: linear-gradient(135deg, rgba(123,97,255,0.12), rgba(255,107,107,0.12));
+        color: #3c3162;
         font-size: 0.9rem;
     }
 
@@ -363,7 +370,7 @@ st.markdown(
     }
 
     .timeline-card {
-        background: linear-gradient(180deg, #fcfefe 0%, var(--surface-3) 100%);
+        background: linear-gradient(160deg, rgba(255,245,250,0.84) 0%, rgba(237,246,255,0.84) 100%);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 1rem;
@@ -380,9 +387,9 @@ st.markdown(
         justify-content: center;
         font-family: "Trebuchet MS", "Segoe UI", sans-serif;
         font-size: 0.95rem;
-        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 55%, var(--brand-3) 100%);
         color: #fff;
-        box-shadow: 0 10px 24px rgba(19, 93, 102, 0.24);
+        box-shadow: 0 10px 24px rgba(123, 97, 255, 0.28);
         margin-bottom: 0.8rem;
     }
 
@@ -425,7 +432,7 @@ st.markdown(
     }
 
     .info-card {
-        background: var(--surface-2);
+        background: linear-gradient(145deg, rgba(255,255,255,0.72) 0%, rgba(255,243,236,0.76) 100%);
         border: 1px solid var(--line);
         border-radius: 18px;
         padding: 0.95rem 1rem;
@@ -463,7 +470,8 @@ st.markdown(
     }
 
     .auth-card {
-        background: var(--surface);
+        background: linear-gradient(160deg, rgba(255,255,255,0.86) 0%, rgba(246,239,255,0.82) 55%, rgba(235,247,255,0.84) 100%);
+        backdrop-filter: blur(16px);
         border: 1px solid var(--line);
         border-radius: 26px;
         padding: 1.3rem;
@@ -481,7 +489,7 @@ st.markdown(
         right: -90px;
         bottom: -90px;
         border-radius: 999px;
-        background: radial-gradient(circle, rgba(19, 93, 102, 0.08), transparent 68%);
+        background: radial-gradient(circle, rgba(123, 97, 255, 0.18), transparent 68%);
     }
 
     .auth-lead {
@@ -491,9 +499,9 @@ st.markdown(
     }
 
     .auth-note {
-        background: var(--brand-soft);
-        border: 1px solid #c8e6e7;
-        color: #1d5560;
+        background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(123,97,255,0.12));
+        border: 1px solid rgba(123, 97, 255, 0.2);
+        color: #4b3f74;
         border-radius: 16px;
         padding: 0.85rem 0.95rem;
         font-size: 0.92rem;
@@ -502,22 +510,22 @@ st.markdown(
     }
 
     div[data-testid="stFileUploader"] {
-        background: #fbfdff;
-        border: 1px dashed #abc4d4;
+        background: linear-gradient(145deg, rgba(255,255,255,0.82) 0%, rgba(244,238,255,0.84) 100%);
+        border: 1px dashed rgba(123, 97, 255, 0.45);
         border-radius: 18px;
         padding: 0.85rem;
         transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
     }
 
     div[data-testid="stFileUploader"]:hover {
-        border-color: var(--brand);
-        box-shadow: 0 12px 28px rgba(19, 93, 102, 0.08);
+        border-color: var(--brand-2);
+        box-shadow: 0 14px 32px rgba(123, 97, 255, 0.16);
         transform: translateY(-2px);
     }
 
     .stTabs [data-baseweb="tab-list"] {
         gap: 0.35rem;
-        background: #edf4f7;
+        background: linear-gradient(135deg, rgba(255,241,246,0.9), rgba(238,243,255,0.92));
         padding: 0.3rem;
         border-radius: 14px;
     }
@@ -534,7 +542,7 @@ st.markdown(
 
     .stTabs [aria-selected="true"] {
         background: #ffffff !important;
-        box-shadow: 0 8px 18px rgba(17, 37, 62, 0.08);
+        box-shadow: 0 10px 22px rgba(93, 63, 143, 0.14);
     }
 
     .stTabs [data-baseweb="tab"]:hover {
@@ -562,20 +570,20 @@ st.markdown(
         border: 0 !important;
         min-height: 2.9rem;
         font-weight: 800 !important;
-        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%) !important;
+        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 58%, var(--brand-3) 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 14px 30px rgba(19, 93, 102, 0.24);
+        box-shadow: 0 16px 34px rgba(113, 75, 192, 0.28);
         transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
     }
 
     .stButton > button:hover, .stFormSubmitButton > button:hover {
         transform: translateY(-2px);
         filter: saturate(1.08);
-        box-shadow: 0 18px 38px rgba(19, 93, 102, 0.28);
+        box-shadow: 0 20px 42px rgba(113, 75, 192, 0.34);
     }
 
     .stDataFrame, div[data-testid="stExpander"] {
-        background: var(--surface);
+        background: rgba(255, 255, 255, 0.82);
         border-radius: 18px;
     }
 
